@@ -1,0 +1,53 @@
+js api
+-------
+
+ajax 
+----
+1- xmlhttps
+2-fetch
+3-async await
+
+
+useEffect - hook used to call function at starting time of components
+
+
+react-router-dom    -library used for redirection
+
+BrowserRouter -  root component selector
+Route - for path setting
+Routes - if we use morethan one path
+
+params
+------
+
+useparams    --- hook used to access params
+
+
+Redux
+---
+
+props drilling - data will stuck in any intermediate component when the component have any issues
+- props drilling occures during coupling(maany connection between parent and child)
+
+
+to avoid props drilling we need to reduce coupling and make all components independent
+
+so react introduced a state management technology - redux 
+
+
+a js store file
+------------
+
+reducer-------------------------->store.js
+|
+|<<<<<
+action-payload-logics <--------------------component
+
+
+
+libraries
+--------
+redux
+react-redux
+redux-thunk
+
