@@ -51,3 +51,21 @@ redux
 react-redux
 redux-thunk
 
+
+axios
+----
+
+used to call api in react
+
+useSelector - hook used to access data from store
+
+
+
+formik - open source library for building and proccessing data in react applications - npm i formik
+yup - java schema builder for validation - npm i yup 
+
+
+
+
+
+

@@ -4,37 +4,40 @@ import { useParams } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup';
 import Operatingtime from './Operatingtime';
 import Review from './Review';
+import { useDispatch, useSelector } from 'react-redux';
+import { getResturants } from './actions/restaction';
 
 
 function Restview() {
 
-  const [restList,setRest]=useState([])
+  // const [restList,setRest]=useState([])
 
 //api to accss data
-const getData=async ()=>{
-  const result=await fetch('/restaurants.json')
-  result.json().then(data=>setRest(data.restaurants))
-}
+// const getData=async ()=>{
+//   const result=await fetch('/restaurants.json')
+//   result.json().then(data=>setRest(data.restaurants))
+// }
 
-console.log(restList);
+// console.log(restList);
+
+
+const dispatch = useDispatch()
 
 
 // object create for useparams
 const params =useParams()
 console.log(params.id);
 
+
+const {restList}= useSelector(state=>state.reducer1)
+
 //find single restaurant data
 const singleRest=restList.find(i=>i.id==params.id)
 console.log(singleRest);
 
 useEffect(()=>{
-getData()
-},[])
-
-
-
-
-
+  dispatch(getResturants)
+})
   return (
     <div>
 
